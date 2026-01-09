@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>監獄アリアドネからの生還　ヒント</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="アリアドネヒント">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js').then(reg => {
+            console.log('SW registered:', reg);
+          }).catch(err => {
+            console.log('SW error:', err);
+          });
+        });
+      }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -13,141 +29,21 @@
             <p>チームメンバー全員の合意を得てから読み進めましょう。</p>
             <button id="show-hint-button">ヒントを見る</button>
         </div>
-
         <div id="hint-content" style="display: none;">
             <h1>監獄アリアドネからの生還　ヒント</h1>
             <div class="hint-time-guidelines">
                 <p class="guideline-heading">ヒント使用時間目安</p>
-                <p>20分経過：一橋殺人事件に挑戦中の場合ヒントを見る<br>
-                40分経過：二宮殺人事件に挑戦中の場合ヒントを見る<br>
-                55分経過：三ツ星宝石店盗難事件に挑戦中の場合ヒントを見る</p>
+                <p>20分経過：一橋殺人事件<br>40分経過：二宮殺人事件<br>55分経過：三ツ星宝石店盗難事件</p>
             </div>
-            
-            <div class="accordion level-1">
-                
-                <div class="accordion-header">
-                    <span class="hint-name">鎖の解錠をするまで</span>
-                </div>
-                <div class="accordion-content">
-                    
-                        <div class="hint-body">
-                            <p>弁護士からのメッセージを受け取るには、メッセージBOXを開ける必要がありますが、鎖で繋がれているため移動ができません。<br>まずは「解錠の手がかり」を用いて鎖の鍵を外しましょう。</p>
-                        </div>
-                    
-            <div class="accordion inner-accordion level-2">
-                
-                <div class="accordion-header">
-                    <span class="hint-name">何をすれば良いのかわからない</span>
-                </div>
-                <div class="accordion-content">
-                    
-                        <div class="hint-body">
-                            <p>身につけている赤丸とは<strong>「囚人バッジ」</strong>を示しています。<br>囚人バッジの数字から「18」を引いた数字（203,794,191,104）であみだくじを辿りましょう。</p>
-                        </div>
-                    
-            <div class="accordion inner-accordion level-3">
-                
-                <div class="accordion-header">
-                    <span class="hint-name">あみだくじを辿った先の文章の意味がわからない</span>
-                </div>
-                <div class="accordion-content">
-                    
-                        <div class="hint-body">
-                            <p>数字を正しく辿ると、<br><strong>「雑居房エリアの中の」「青丸」「4つ」「小さい順」</strong>となります。<br>これに合う<span class="red-text"><strong>イラストを雑居房エリア内から見つけましょう。</strong></span><br>見つけた4つのイラストを言葉に置き換え、かつ「小さい順に」「1つめ」から当てはめましょう。<br>最も小さい青丸は「封筒」を表します。</p>
-                        </div>
-                    
-            <div class="accordion inner-accordion level-4">
-                
-                <div class="accordion-header">
-                    <span class="hint-name">イラストを言葉に置き換えられない</span>
-                </div>
-                <div class="accordion-content">
-                    
-                        <div class="hint-body">
-                            <p>4つの青丸はそれぞれ小さい順に<strong>「封筒」「切手」「光」</strong>です。<br>最も大きい青丸は行動を表す言葉になります。<br><br><strong>何を表すか分かったら実際に行動してみましょう。</strong></p>
-                        </div>
-                    
-            <div class="accordion inner-accordion level-5">
-                
-                <div class="accordion-header">
-                    <span class="hint-name">鍵の番号の答え</span>
-                </div>
-                <div class="accordion-content">
-                    
-                        <div class="hint-body">
-                            <p>「封筒の切手を光で透かせ」という行動を実際にとると封筒の切手に「777」と書かれています。<br><br>鎖の鍵は<span class="red-text"><strong>【777】</strong></span>で開きます。</p>
-                        </div>
-                    
-                </div>
-            </div>
-
-                </div>
-            </div>
-
-                </div>
-            </div>
-
-                </div>
-            </div>
-
-                </div>
-            </div>
-
-            <div class="accordion level-1">
-                
-                <div class="accordion-header">
-                    <span class="hint-name">一橋殺人事件</span>
-                </div>
-                <div class="accordion-content">
-                    
-                        <div class="hint-body">
-                            <p>みなさんは無実・潔白ですが、証拠不十分として逮捕されました。<br>他の容疑者の中に真犯人がいます。<br>容疑者の提出証拠の情報を整理して、真犯人を突き止めましょう。</p>
-                        </div>
-                    
-            <div class="accordion inner-accordion level-2">
-                
-                <div class="accordion-header">
-                    <span class="hint-name">音声データの内容</span>
-                </div>
-                <div class="accordion-content">
-                    
-                        <div class="hint-body">
-                            <p>ボイスレコーダーの録音を聞き取ると空欄上から<br>「30分」「8/22」「19:00」と埋まります。</p>
-                        </div>
-                    
-                </div>
-            </div>
-
-            <div class="accordion inner-accordion level-2">
-                
-                <div class="accordion-header">
-                    <span class="hint-name">誰が真犯人かわからない</span>
-                </div>
-                <div class="accordion-content">
-                    
-                        <div class="hint-body">
-                            <p>提出証拠を見比べて、死亡推定時刻に犯行現場にいることができた容疑者はいないでしょうか。<br><span class="red-text"><strong>容疑者①と容疑者②の提出証拠を見比べてみましょう。</strong></span><br>何か違いはないでしょうか。</p>
-                        </div>
-                    
-            <div class="accordion inner-accordion level-3">
-                
-                <div class="accordion-header">
-                    <span class="hint-name">一橋殺人事件の真犯人の答え</span>
-                </div>
-                <div class="accordion-content">
-                    
-                        <div class="hint-body">
-                            <p>容疑者①の提出証拠に写っているデジタル時計は「20:57」を示しています。<br>スーパーマケトのレシートと照らし合わせるとこの時計が表している時刻は正しいことがわかります。<br><br>対して、<span class="red-text"><strong>容疑者②の提出証拠に写っているデジタル時計は上下反転しています。</strong></span><br>つまり、容疑者②がレストランBIMIにいたのは「22:02」ではなく「20:22」です。<br>容疑者②は、レストランBIMIと犯行現場の距離を考慮すると死亡推定時刻に犯行現場にいることができます。<br>よって、アリバイが不完全なのは<span class="red-text"><strong>容疑者②</strong></span>です。</p>
-                        </div>
-                    
-                </div>
-            </div>
-
-                </div>
-            </div>
-
-                </div>
-            </div>
+            <div class="accordion level-1"><div class="accordion-header"><span class="hint-name">鎖の解錠をするまで</span></div><div class="accordion-content"><div class="hint-body"><p>弁護士からのメッセージを受け取るには、メッセージBOXを開ける必要がありますが、鎖で繋がれているため移動ができません。<br>まずは「解錠の手がかり」を用いて鎖の鍵を外しましょう。</p></div><div class="accordion inner-accordion level-2"><div class="accordion-header"><span class="hint-name">何をすれば良いのかわからない</span></div><div class="accordion-content"><div class="hint-body"><p>身につけている赤丸とは<strong>「囚人バッジ」</strong>を示しています。<br>囚人バッジの数字から「18」を引いた数字（203,794,191,104）であみだくじを辿りましょう。</p></div><div class="accordion inner-accordion level-3"><div class="accordion-header"><span class="hint-name">あみだくじを辿った先の文章の意味がわからない</span></div><div class="accordion-content"><div class="hint-body"><p>数字を正しく辿ると、<br><strong>「雑居房エリアの中の」「青丸」「4つ」「小さい順」</strong>となります。<br>これに合う<span class="red-text"><strong>イラストを雑居房エリア内から見つけましょう。</strong></span><br>見つけた4つのイラストを言葉に置き換え、かつ「小さい順に」「1つめ」から当てはめましょう。<br>最も小さい青丸は「封筒」を表します。</p></div><div class="accordion inner-accordion level-4"><div class="accordion-header"><span class="hint-name">イラストを言葉に置き換えられない</span></div><div class="accordion-content"><div class="hint-body"><p>4つの青丸はそれぞれ小さい順に<strong>「封筒」「切手」「光」</strong>です。<br>最も大きい青丸は行動を表す言葉になります。<br><br><strong>何を表すか分かったら実際に行動してみましょう。</strong></p></div><div class="accordion inner-accordion level-5"><div class="accordion-header"><span class="hint-name">鍵の番号の答え</span></div><div class="accordion-content"><div class="hint-body"><p>「封筒の切手を光で透かせ」という行動を実際にとると封筒の切手に「777」と書かれています。<br><br>鎖の鍵は<span class="red-text"><strong>【777】</strong></span>で開きます。</p></div></div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+<div class="accordion level-1"><div class="accordion-header"><span class="hint-name">一橋殺人事件</span></div><div class="accordion-content"><div class="hint-body"><p>みなさんは無実・潔白ですが、証拠不十分として逮捕されました。<br>他の容疑者の中に真犯人がいます。<br>容疑者の提出証拠の情報を整理して、真犯人を突き止めましょう。</p></div><div class="accordion inner-accordion level-2"><div class="accordion-header"><span class="hint-name">音声データの内容</span></div><div class="accordion-content"><div class="hint-body"><p>ボイスレコーダーの録音を聞き取ると空欄上から<br>「30分」「8/22」「19:00」と埋まります。</p></div></div></div>
+<div class="accordion inner-accordion level-2"><div class="accordion-header"><span class="hint-name">誰が真犯人かわからない</span></div><div class="accordion-content"><div class="hint-body"><p>提出証拠を見比べて、死亡推定時刻に犯行現場にいることができた容疑者はいないでしょうか。<br><span class="red-text"><strong>容疑者①と容疑者②の提出証拠を見比べてみましょう。</strong></span><br>何か違いはないでしょうか。</p></div><div class="accordion inner-accordion level-3"><div class="accordion-header"><span class="hint-name">一橋殺人事件の真犯人の答え</span></div><div class="accordion-content"><div class="hint-body"><p>容疑者①の提出証拠に写っているデジタル時計は「20:57」を示しています。<br>スーパーマケトのレシートと照らし合わせるとこの時計が表している時刻は正しいことがわかります。<br><br>対して、<span class="red-text"><strong>容疑者②の提出証拠に写っているデジタル時計は上下反転しています。</strong></span><br>つまり、容疑者②がレストランBIMIにいたのは「22:02」ではなく「20:22」です。<br>容疑者②は、レストランBIMIと犯行現場の距離を考慮すると死亡推定時刻に犯行現場にいることができます。<br>よって、アリバイが不完全なのは<span class="red-text"><strong>容疑者②</strong></span>です。</p></div></div></div>
+</div></div>
+</div></div>
 
         </div>
     </div>
