@@ -10,26 +10,58 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="アリアドネヒント">
     <link rel="apple-touch-icon" href="icon-192.png">
+    <style>
+      /* シンプルなリロードボタンのスタイル */
+      .reload-container {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 100;
+      }
+      .reload-button {
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        color: #666;
+        padding: 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .reload-button:active {
+        background-color: #eee;
+        transform: rotate(90deg);
+        transition: 0.2s;
+      }
+    </style>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('./sw.js').then(reg => {
-            console.log('SW registered:', reg);
-          }).catch(err => {
-            console.log('SW error:', err);
-          });
+          navigator.serviceWorker.register('./sw.js');
         });
+      }
+      function reloadPage() {
+        location.reload(true);
       }
     </script>
 </head>
 <body>
-    <div class="container">
+    <div class="container" style="position: relative;">
         <div id="start-screen">
             <h1>監獄アリアドネからの生還</h1>
             <p>チームメンバー全員の合意を得てから読み進めましょう。</p>
             <button id="show-hint-button">ヒントを見る</button>
         </div>
+
         <div id="hint-content" style="display: none;">
+            <div class="reload-container">
+              <button class="reload-button" onclick="reloadPage()" title="再読み込み">↻</button>
+            </div>
             <h1>監獄アリアドネからの生還　ヒント</h1>
             <div class="hint-time-guidelines">
                 <p class="guideline-heading">ヒント使用時間目安</p>
